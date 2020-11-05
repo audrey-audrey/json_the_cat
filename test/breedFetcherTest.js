@@ -20,7 +20,7 @@ describe('fetchBreedDescription', () => {
   });
 
   // Test case 2 for when breedName is non-existant and error is expected
-  it('returns a string description for a valid breed, via callback', (done) => {
+  it('returns an error description for an invalid breed, via callback', (done) => {
     fetchBreedDescription('random', (err, desc) => {
       // we expect error to say Breed not found!
       assert.equal(err, 'Breed not found!');
